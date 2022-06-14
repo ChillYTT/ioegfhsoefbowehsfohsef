@@ -40,7 +40,8 @@ io.on('connection', function (socket) {
 			socket.proto.room = 'main';
 			data = '/main';
 		}
-		socket.emit('message', { name: 'Chill', message: `Hi and welcome to ACO (Anonymous Chat Online) here you can chat online while being anonymous. This site is supported by almost all devices! enjoy :)` });
+		socket.emit('message', { name: 'System', message: `you are now online!` });
+		socket.emit('message', { name: 'TB (admin)', message: `Hi and welcome to Random chat here you can chat online bc why not. This site is supported by almost all devices! enjoy :)` });
 	});
 	socket.on('message', function (data) {
 		let message = data.message.substr(0, 500);
